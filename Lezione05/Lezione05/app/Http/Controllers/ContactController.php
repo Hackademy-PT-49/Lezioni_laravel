@@ -30,6 +30,13 @@ class ContactController extends Controller
 
     public function sendFeedback(Request $request){
 
+        // La prima volta setto i dati del mailer nel .env
+
+        // Creo mail php artisan make:mail NomeMail
+        // Definisco proprietà della mail nella classe (metodi envelope e content)
+        // Volendo accetto dati dall'esterno tramite attributi pubblici e costruttore
+        // Nel controller invio un oggetto di tipo mailable con Mail::to()->send();
+
         Mail::to('emanuele@admin.it')->send(new Feedback($request->email,$request->messaggio));
 
         return redirect()->back()->with('success','Hai inviato il tuo feedback! Yee!');
