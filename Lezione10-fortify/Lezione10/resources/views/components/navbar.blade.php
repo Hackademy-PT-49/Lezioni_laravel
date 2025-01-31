@@ -10,10 +10,27 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
-
-                {{-- <li class="nav-item">
-                  <a class="nav-link" href="{{route('articles')}}">Articoli</a>
-                </li> --}}
+                @guest
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('register')}}">Registrazione</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('login')}}">Login</a>
+                </li>
+                @endguest
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('profile')}}">Profilo</a>
+                </li>
+                <li>
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-secondary">
+                             Logout
+                        </button>
+                    </form>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>
