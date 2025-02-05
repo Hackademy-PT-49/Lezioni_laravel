@@ -29,6 +29,11 @@
 - php artisan make:request NomeFormRequest                    : genera request custom per validazione e autorizzazione rotte
 - php artisan make:mail NomeMail                              : genera classe Mailable, inviabile per tramite Mailer di laravel
 - php artisan make:model NomeModello                           : genera modello nome come tabella db, al singolare prima lettera ogni parola maiuscola
+- php artisan make:model NomeModello -mcr                      : crea modello, migrazione, controller con metodi CRUD
+
+# Fortify
+- composer require laravel/fortify                            : scarica il pacchetto fortify
+- php artisan fortify:install                                 : pubblica i file necessari di fortify dal vendor al progetto
 
 # Cache
 - php artisan view:clear                     : pulisce la cache delle viste, utile se elimino classe di componenti non anonimi
