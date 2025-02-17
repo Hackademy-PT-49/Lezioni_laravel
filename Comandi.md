@@ -30,10 +30,18 @@
 - php artisan make:mail NomeMail                              : genera classe Mailable, inviabile per tramite Mailer di laravel
 - php artisan make:model NomeModello                           : genera modello nome come tabella db, al singolare prima lettera ogni parola maiuscola
 - php artisan make:model NomeModello -mcr                      : crea modello, migrazione, controller con metodi CRUD
+- php artisan make:factory NomeModelloFactory                   : crea factory per il modello corrispondente
+- php artisan make:seeder NomeSeeder                             : crea seeder per dei dati
+
+# Utility 
+- php artisan db:seed                                        : lancia il seeder di default
 
 # Fortify
 - composer require laravel/fortify                            : scarica il pacchetto fortify
 - php artisan fortify:install                                 : pubblica i file necessari di fortify dal vendor al progetto
+
+# Livewire 
+- composer require livewire/livewire                          :installa livewire
 
 # Cache
 - php artisan view:clear                     : pulisce la cache delle viste, utile se elimino classe di componenti non anonimi
